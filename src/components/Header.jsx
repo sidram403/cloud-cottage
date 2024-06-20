@@ -33,21 +33,21 @@ const Header = () => {
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
-            <a href="#cottages" className="hover:text-[#008080] text-[24px]">
+            <p className="hover:text-[#008080] text-[24px]">
               Cottages
-            </a>
+            </p>
             {isHovered && (
               <div className="absolute top-8 mt-2 w-48 bg-[#008080] rounded-md shadow-lg flex flex-col text-left z-20">
-                <a href="#cottage1" className="px-4 py-2 hover:bg-gray-700">
+                <a href="/cottage1" className="px-4 py-2 hover:bg-gray-700">
                   Cottage 1
                 </a>
-                <a href="#cottage2" className="px-4 py-2 hover:bg-gray-700">
+                <a href="/cottage2" className="px-4 py-2 hover:bg-gray-700">
                   Cottage 2
                 </a>
-                <a href="#cottage3" className="px-4 py-2 hover:bg-gray-700">
+                <a href="/cottage3" className="px-4 py-2 hover:bg-gray-700">
                   Cottage 3
                 </a>
-                <a href="#cottage4" className="px-4 py-2 hover:bg-gray-700">
+                <a href="/cottage4" className="px-4 py-2 hover:bg-gray-700">
                   Cottage 4
                 </a>
               </div>
@@ -57,7 +57,7 @@ const Header = () => {
             Guests
           </a>
           <a
-            href="#contact"
+            href="/contact"
             className="py-2 px-10 border text-[24px] border-white rounded-full"
           >
             Contact Us

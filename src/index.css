@@ -66,3 +66,21 @@ body{
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.8);
 }
+
+.image-gallery-content .image-gallery-slide .image-gallery-image {
+  max-height: calc(100vh - 175px);
+}
+
+.image-gallery-slide .image-gallery-image {
+  width: 100%;
+  -o-object-fit: contain;
+  object-fit: cover;
+}
+.image-gallery-thumbnail {
+  width: 215px;
+}
+@media (max-width: 768px){
+.image-gallery-thumbnail {
+  width: 140px;
+}
+}

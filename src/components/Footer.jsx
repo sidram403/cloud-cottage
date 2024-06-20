@@ -26,12 +26,12 @@ const Footer = () => {
             </div>
           </div>
           <div className="flex flex-row items-center flex-wrap gap-4 md:gap-2 md:flex-nowrap md:flex-col md:text-right para-family">
-            <p className="cursor-pointer">Home</p>
-            <p className="cursor-pointer">Cottages</p>
-            <p className="cursor-pointer">Terms & Conditions</p>
-            <p className="cursor-pointer">Privacy Policy</p>
-            <p className="cursor-pointer">Contact Us</p>
-            <p className="cursor-pointer">FAQs</p>
+            <p className="cursor-pointer"><a href="/">Home</a></p>
+            <p className="cursor-pointer"><a href="#services">Cottages</a></p>
+            <p className="cursor-pointer"><a href="/termsandcondition">Terms & Conditions</a></p>
+            <p className="cursor-pointer"><a href="/privacy">Privacy Policy</a></p>
+            <p className="cursor-pointer"><a href="/contact">Contact Us</a></p>
+            <p className="cursor-pointer"><a href="/faq">FAQs</a></p>
 
           </div>
         </div>
