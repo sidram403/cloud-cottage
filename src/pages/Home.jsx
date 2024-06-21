@@ -9,6 +9,8 @@ import DiscoverImg1 from "../assets/discover-bg-01.png";
 import DiscoverImg2 from "../assets/discover-bg-02.png";
 import DiscoverImg3 from "../assets/discover-bg-03.png";
 import DiscoverImg4 from "../assets/discover-bg-04.png";
+import DiscoverImg5 from "../assets/discover-bg-05.png";
+import DiscoverImg6 from "../assets/discover-bg-06.png";
 import ServiceImg1 from "../assets/service_01.png";
 import ServiceImg2 from "../assets/service_02.png";
 import ServiceImg3 from "../assets/service_03.png";
@@ -72,7 +74,10 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="relative h-[500px] bg-cover bg-center " style={{ backgroundImage: `url('./bg-welcome.png')` }}>
+      <div
+        className="relative h-[500px] bg-cover bg-center "
+        style={{ backgroundImage: `url('./bg-welcome.png')` }}
+      >
         <div className="absolute inset-y-0 right-0 flex items-center justify-center bg-welcome-color bg-opacity-50 w-full md:w-1/2">
           <div className="text-center text-white py-12 px-8 md:px-12 lg:px-20 w-[100%]">
             <h1 className="text-[25px] lg:text-[32px] uppercase font-normal mb-4 header-family">
@@ -87,10 +92,10 @@ const Home = () => {
               bayside cottages have so much to offer. Come share our piece of
               paradise with us!
             </p>
-            <Link to={'/contact'}>
-            <button className="bg-[#F6BE2E] btn-family text-[25px] md:text-[30px] mt-12 hover:bg-[#F6BE2e] text-white font-bold  py-2 px-6 md:px-8 rounded">
-              Contact Us
-            </button>
+            <Link to={"/contact"}>
+              <button className="bg-[#F6BE2E] btn-family text-[25px] md:text-[30px] mt-12 hover:bg-[#F6BE2e] text-white font-bold  py-2 px-6 md:px-8 rounded">
+                Contact Us
+              </button>
             </Link>
           </div>
         </div>
@@ -99,25 +104,59 @@ const Home = () => {
         <h2 className="text-3xl sm:text-4xl lg:text-[32px] font-normal text-center mb-8 uppercase header-family">
           Discover Things To Do In The Area
         </h2>
-        <div className="flex flex-wrap gap-4 md:gap-0 lg:gap-0">
-          <div className="w-full md:w-1/2 lg:w-1/4">
-            <DiscoverSection img={DiscoverImg1} title="Bird Watching" />
-          </div>
-          <div className="w-full md:w-1/2 lg:w-1/4">
-            <DiscoverSection img={DiscoverImg2} title="Beaches" />
-          </div>
-          <div className="w-full md:w-1/2 lg:w-1/4">
-            <DiscoverSection img={DiscoverImg3} title="Nature Parks" />
-          </div>
-          <div className="w-full md:w-1/2 lg:w-1/4">
-            <DiscoverSection img={DiscoverImg4} title="Light House" />
+        <div className="flex flex-col bg-[#C9FFFF] m-auto p-auto">
+          <div className="flex overflow-x-scroll pb-10 hide-scroll-bar">
+            <div className="flex flex-nowrap">
+              <div className="w-full md:w-1/2 lg:w-1/4">
+                <div className="inline-block px-3">
+                  <div className="relative w-96 h-[400px] md:h-96 lg:h-[450px] max-w-xs overflow-hidden transition-shadow duration-300 ease-in-out">
+                    <DiscoverSection img={DiscoverImg1} title="Bird Watching" />
+                  </div>
+                </div>
+              </div>
+              <div className="w-full md:w-1/2 lg:w-1/4">
+                <div className="inline-block px-3">
+                  <div className="relative w-96 h-[410px] md:h-96 lg:h-[470px] max-w-xs overflow-hidden transition-shadow duration-300 ease-in-out">
+                    <DiscoverSection img={DiscoverImg2} title="Beaches" />
+                  </div>
+                </div>
+              </div>
+              <div className="w-full md:w-1/2 lg:w-1/4">
+                <div className="inline-block px-3">
+                  <div className="relative w-96 h-[400px] md:h-96 lg:h-[450px] max-w-xs overflow-hidden transition-shadow duration-300 ease-in-out">
+                    <DiscoverSection img={DiscoverImg3} title="Nature Parks" />
+                  </div>
+                </div>
+              </div>
+              <div className="w-full md:w-1/2 lg:w-1/4">
+                <div className="inline-block px-3">
+                  <div className="relative w-96 h-[400px] md:h-96 lg:h-[450px] max-w-xs overflow-hidden transition-shadow duration-300 ease-in-out">
+                    <DiscoverSection img={DiscoverImg4} title="Light House" />
+                  </div>
+                </div>
+              </div>
+              <div className="w-full md:w-1/2 lg:w-1/4">
+                <div className="inline-block px-3">
+                  <div className="relative w-96 h-[400px] md:h-96 lg:h-[450px] max-w-xs overflow-hidden transition-shadow duration-300 ease-in-out">
+                    <DiscoverSection img={DiscoverImg5} title="RECREATION" />
+                  </div>
+                </div>
+              </div>
+              <div className="w-full md:w-1/2 lg:w-1/4">
+                <div className="inline-block px-3">
+                  <div className="relative w-96 h-[400px] md:h-96 lg:h-[450px] max-w-xs overflow-hidden transition-shadow duration-300 ease-in-out">
+                    <DiscoverSection img={DiscoverImg6} title="ROCK HUNTING" />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div className="flex justify-center mt-8">
-          <Link to={'/thingstodo'}>
-          <button className="bg-[#F6BE2E] btn-family text-[30px] mt-4 hover:bg-[#F6BE2e] text-white font-bold py-2 px-8 rounded">
-            Explore Here
-          </button>
+          <Link to={"/thingstodo"}>
+            <button className="bg-[#F6BE2E] btn-family text-[30px] mt-4 hover:bg-[#F6BE2e] text-white font-bold py-2 px-8 rounded">
+              Explore Here
+            </button>
           </Link>
         </div>
       </div>
@@ -143,27 +182,45 @@ const Home = () => {
           <h1 className="text-3xl sm:text-4xl lg:text-[32px] font-normal text-center uppercase header-family mb-8">
             What Our Guests Say
           </h1>
-          <div className="flex flex-col md:flex-row justify-center gap-4">
-            <div className="w-full md:w-1/3">
-              <TestimonailCard
-                rating={4}
-                text="We had such a wonderful time during our two night stay here! The owners are incredibly friendly, and the cabins and grounds are immaculate. We will be back for sure!"
-                name="Erin S"
-              />
-            </div>
-            <div className="w-full md:w-1/3">
-              <TestimonailCard
-                rating={4}
-                text="We had such a wonderful time during our two night stay here! The owners are incredibly friendly, and the cabins and grounds are immaculate. We will be back for sure!"
-                name="Erin S"
-              />
-            </div>
-            <div className="w-full md:w-1/3">
-              <TestimonailCard
-                rating={4}
-                text="We had such a wonderful time during our two night stay here! The owners are incredibly friendly, and the cabins and grounds are immaculate. We will be back for sure!"
-                name="Erin S"
-              />
+          <div className="flex flex-col m-auto p-auto">
+            <div className="flex overflow-x-scroll pb-10 hide-scroll-bar">
+              <div className="flex flex-nowrap">
+                <div className="w-full md:w-1/3">
+                  <TestimonailCard
+                    rating={4}
+                    text="We had such a wonderful time during our two night stay here! The owners are incredibly friendly, and the cabins and grounds are immaculate. We will be back for sure!"
+                    name="Erin S"
+                  />
+                </div>
+                <div className="w-full md:w-1/3">
+                  <TestimonailCard
+                    rating={4}
+                    text="I was impressed with our little A-frame cottage mini-vacation. The cottage was cute and very clean. We enjoyed a perfect sunrise every morning. Had everything we needed in the cabin to enjoy our time away from home. The innkeepers are very personable and very accommodating."
+                    name="Debbra G"
+                  />
+                </div>
+                <div className="w-full md:w-1/3">
+                  <TestimonailCard
+                    rating={4}
+                    text="It was the best place we stayed at up in the UP. I will be back. The owners were top notch."
+                    name=" Randy B"
+                  />
+                </div>
+                <div className="w-full md:w-1/3">
+                  <TestimonailCard
+                    rating={4}
+                    text="Perfect place to relax and peaceful area. We had really good time staying at Cloud Nine Cottage. The host was welcoming and the cabin we got was very beautiful and clean. The cottage is right next to water. You can see beautiful sunrise and sunset views. Can’t get any better!"
+                    name="Ganesh P"
+                  />
+                </div>
+                <div className="w-full md:w-1/3">
+                  <TestimonailCard
+                    rating={4}
+                    text="I cannot say enough about how clean our cabin was. We stayed in the A-frame for a girls' weekend/mom getaway. It was perfect! The cabin was well-stocked and so comfortable. We will definitely be back again. So glad we found this place. Would highly recommend."
+                    name="Jessica B."
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
