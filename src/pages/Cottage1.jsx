@@ -128,7 +128,7 @@ const Cottage1 = () => {
   return (
     <div>
       <Header />
-      <div className="pt-32 mx-16 lg:mx-16 ">
+      <div className="py-32 px-8 md:px-16 ">
         <CottageCarasoul images={images} head1="COTTAGE 1" bed="1" bath="1" member="2" para="This charming haven features rustic pine décor that’s perfect for
           relaxation and rejuvenation. Perfect for a honeymoon suite or romantic
           getaway!" />

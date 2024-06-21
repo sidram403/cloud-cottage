@@ -18,10 +18,11 @@ import TestimonailCard from "../components/TestimonailCard";
 import SubscribeSection from "../components/SubscribeSection";
 import ContentWithMap from "../components/GoogleMap";
 import Footer from "../components/Footer";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <div>
+    <div className="w-full">
       <Header />
       <HeroSection />
       <div className="py-8 lg:py-20 ">
@@ -86,9 +87,11 @@ const Home = () => {
               bayside cottages have so much to offer. Come share our piece of
               paradise with us!
             </p>
+            <Link to={'/contact'}>
             <button className="bg-[#F6BE2E] btn-family text-[25px] md:text-[30px] mt-12 hover:bg-[#F6BE2e] text-white font-bold  py-2 px-6 md:px-8 rounded">
               Contact Us
             </button>
+            </Link>
           </div>
         </div>
       </div>
@@ -111,9 +114,11 @@ const Home = () => {
           </div>
         </div>
         <div className="flex justify-center mt-8">
+          <Link to={'/thingstodo'}>
           <button className="bg-[#F6BE2E] btn-family text-[30px] mt-4 hover:bg-[#F6BE2e] text-white font-bold py-2 px-8 rounded">
             Explore Here
           </button>
+          </Link>
         </div>
       </div>
       <div className="py-20 px-4 sm:px-6 md:px-8 lg:px-10 bg-white">
@@ -163,7 +168,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-      ;
       <SubscribeSection />
       <div className="py-4 px-16 md:px-20 lg:px-32">
         <ContentWithMap />

@@ -10,9 +10,9 @@ const Footer = () => {
       <div className="relative h-[400px] bg-cover bg-center  text-white" style={{ backgroundImage: `url('./bg-footer.png')` }}>
         <div className="bg-overlay-footer"></div>
 
-        <div className="relative z-10 flex flex-col text-center gap-8 md:flex-row md:justify-between md:items-center  w-full h-full px-20 text-white">
-          <div className="flex flex-col text-center w-[350px]">
-            <h1 className="header-family text- text-[35px] mb-4 uppercase text-left">
+        <div className="relative z-10 flex flex-col text-left md:text-center gap-8 md:flex-row md:justify-between md:items-center  w-full h-full px-8 md:px-20 text-white">
+          <div className="flex flex-col lg:text-center w-full md:w-[350px]">
+            <h1 className="header-family text-[35px] mb-4 uppercase text-left">
               Make Your Stay Count With Us
             </h1>
             <div className="flex items-center gap-2 mb-4 para-family">

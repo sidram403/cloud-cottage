@@ -128,7 +128,7 @@ const Cottage4 = () => {
       return (
         <div>
           <Header />
-          <div className="pt-32 mx-16 lg:mx-16 ">
+          <div className="py-32 px-8 md:px-16 ">
             <CottageCarasoul images={images} head1="COTTAGE 4" bed="1" bath="1" member="2" para="This cozy A frame offers a spacious loft bedroom that overlooks the bay for stunning sunrise views and a back porch for sipping your morning coffee to the serenade of waves on the bay." />
     
             <div className="para-family mt-[56px]">

@@ -128,7 +128,7 @@ const Cottage2 = () => {
       return (
         <div>
           <Header />
-          <div className="pt-32 mx-16 lg:mx-16 ">
+          <div className="py-32 px-8 md:px-16 ">
             <CottageCarasoul images={images} head1="Cottage 2" bed="1" bath="1" member="2" para="This knotty pine cabin invites you to unwind with its overlooks of both Whitefish Bay and a tree-lined ravine." />
     
             <div className="para-family mt-[56px]">
