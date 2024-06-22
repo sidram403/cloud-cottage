@@ -1,7 +1,7 @@
 // src/components/ContentWithMap.js
 
 import React from 'react';
-import GoogleMapImg from '../assets/google-map.png'
+// import GoogleMapImg from '../assets/google-map.png'
 
 const ContentWithMap = () => {
     
@@ -12,8 +12,7 @@ const ContentWithMap = () => {
         <h1 className="header-family text-black text-[25px] lg:text-[40px] uppercase text-center">Locate Us</h1>
       </div>
       <div className="flex flex-col text-center items-center justify-center  h-full space-y-8 w-full">
-        <img src={GoogleMapImg} alt="Your Image" className="md:w-[400px] lg:w-[600px] h-auto" />
-        
+        <iframe className="md:w-[65%] lg:w-[60%] h-[67%]" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d43857.14168760549!2d-85.06243986576413!3d46.605592799774215!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4d4994b2a1f5804d%3A0x63aef93bad501ee5!2sCloud%20Nine%20Cottages!5e0!3m2!1sen!2sin!4v1718984475469!5m2!1sen!2sin"></iframe>
       </div>
     </div>
   );

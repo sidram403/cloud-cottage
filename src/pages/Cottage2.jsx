@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import CottageCarasoul from "../components/CottageCarasoul";
-import { IoBedOutline } from "react-icons/io5";
+import { IoIosArrowDropdown, IoIosArrowDropup } from "react-icons/io";
 import SubscribeSection from "../components/SubscribeSection";
 import ContactSection from "../components/ContactSection";
 const images = [
@@ -38,93 +38,116 @@ const images = [
 
 const Cottage2 = () => {
     
-    const Amenities = [
-        {
-          icon: <IoBedOutline className="w-[50px] h-[50px]" />,
-          name: "One Queen Bed",
-        },
-        {
-          icon: <IoBedOutline className="w-[50px] h-[50px]" />,
-          name: "Small living room area",
-        },
-        {
-          icon: <IoBedOutline className="w-[50px] h-[50px]" />,
-          name: "Dining Table",
-        },
-        { icon: <IoBedOutline className="w-[50px] h-[50px]" />, name: "Smart TV " },
-        { icon: <IoBedOutline className="w-[50px] h-[50px]" />, name: "Wifi" },
-        {
-          icon: <IoBedOutline className="w-[50px] h-[50px]" />,
-          name: "Stove/Oven ",
-        },
-        {
-          icon: <IoBedOutline className="w-[50px] h-[50px]" />,
-          name: "Refrigerator",
-        },
-        { icon: <IoBedOutline className="w-[50px] h-[50px]" />, name: "Microwave" },
-        {
-          icon: <IoBedOutline className="w-[50px] h-[50px]" />,
-          name: "Coffee maker",
-        },
-        { icon: <IoBedOutline className="w-[50px] h-[50px]" />, name: "Toaster" },
-        {
-          icon: <IoBedOutline className="w-[50px] h-[50px]" />,
-          name: "Pots & Pans",
-        },
-        {
-          icon: <IoBedOutline className="w-[50px] h-[50px]" />,
-          name: "Silver ware",
-        },
-        {
-          icon: <IoBedOutline className="w-[50px] h-[50px]" />,
-          name: "Salt & Pepper",
-        },
-        {
-          icon: <IoBedOutline className="w-[50px] h-[50px]" />,
-          name: "Outdoor grill",
-        },
-        { icon: <IoBedOutline className="w-[50px] h-[50px]" />, name: "Hot water" },
-        { icon: <IoBedOutline className="w-[50px] h-[50px]" />, name: "Showers " },
-        { icon: <IoBedOutline className="w-[50px] h-[50px]" />, name: "Towel" },
-        { icon: <IoBedOutline className="w-[50px] h-[50px]" />, name: "Shampoo" },
-        { icon: <IoBedOutline className="w-[50px] h-[50px]" />, name: "Soap" },
-        {
-          icon: <IoBedOutline className="w-[50px] h-[50px]" />,
-          name: "Toilet paper",
-        },
-        {
-          icon: <IoBedOutline className="w-[50px] h-[50px]" />,
-          name: "Extra blanket/pillows ",
-        },
-        {
-          icon: <IoBedOutline className="w-[50px] h-[50px]" />,
-          name: "Ceiling fan",
-        },
-        { icon: <IoBedOutline className="w-[50px] h-[50px]" />, name: "Hangers" },
-        {
-          icon: <IoBedOutline className="w-[50px] h-[50px]" />,
-          name: "Vacumn Cleaner",
-        },
-        {
-          icon: <IoBedOutline className="w-[50px] h-[50px]" />,
-          name: "Fire extinguisher",
-        },
-        {
-          icon: <IoBedOutline className="w-[50px] h-[50px]" />,
-          name: "Fire alarm",
-        },
-        { icon: <IoBedOutline className="w-[50px] h-[50px]" />, name: "CO2 alarm" },
-        { icon: <IoBedOutline className="w-[50px] h-[50px]" />, name: "No pets" },
-        { icon: <IoBedOutline className="w-[50px] h-[50px]" />, name: "No AC" },
-        {
-          icon: <IoBedOutline className="w-[50px] h-[50px]" />,
-          name: "Smoke free",
-        },
-        {
-          icon: <IoBedOutline className="w-[50px] h-[50px]" />,
-          name: "No Hairdryer",
-        },
-      ];
+  const Amenities = [
+    {
+      icon: "./icons/icon221.png",
+      name: "Two Twin Bed",
+    },
+    {
+      icon: "./icons/icon2.png",
+      name: "Small living room area",
+    },
+    {
+      icon: "./icons/icon3.png",
+      name: "Dining Table",
+    },
+    { icon: "./icons/icon4.png", name: "Smart TV " },
+    { icon: "./icons/icon5.png", name: "Wifi" },
+    {
+      icon: "./icons/icon6.png",
+      name: "Stove/Oven ",
+    },
+    {
+      icon: "./icons/icon7.png",
+      name: "Refrigerator",
+    },
+    { icon: "./icons/icon8.png", name: "Microwave" },
+    {
+      icon: "./icons/icon9.png",
+      name: "Coffee maker",
+    },
+    { icon: "./icons/icon10.png", name: "Toaster" },
+    {
+      icon: "./icons/icon11.png",
+      name: "Pots & Pans",
+    },
+    {
+      icon: "./icons/icon12.png",
+      name: "Silver ware",
+    },
+    {
+      icon: "./icons/icon13.png",
+      name: "Salt & Pepper",
+    },
+    {
+      icon: "./icons/icon14.png",
+      name: "Outdoor grill",
+    },
+    { icon: "./icons/icon15.png", name: "Hot water" },
+    { icon: "./icons/icon16.png", name: "Showers " },
+    { icon: "./icons/icon17.png", name: "Towel" },
+    { icon: "./icons/icon18.png", name: "Shampoo" },
+    { icon: "./icons/icon19.png", name: "Soap" },
+    {
+      icon: "./icons/icon20.png",
+      name: "Toilet paper",
+    },
+    {
+      icon: "./icons/icon21.png",
+      name: "Extra blanket/pillows ",
+    },
+    {
+      icon: "./icons/icon22.png",
+      name: "Ceiling fan",
+    },
+    { icon: "./icons/icon23.png", name: "Hangers" },
+    {
+      icon: "./icons/icon24.png",
+      name: "Vacumn Cleaner",
+    },
+    {
+      icon: "./icons/icon25.png",
+      name: "Fire extinguisher",
+    },
+    {
+      icon: "./icons/icon26.png",
+      name: "Fire alarm",
+    },
+    { icon: "./icons/icon27.png", name: "CO2 alarm" },
+    { icon: "./icons/icon28.png", name: "No pets" },
+    { icon: "./icons/icon29.png", name: "No AC" },
+    {
+      icon: "./icons/icon30.png",
+      name: "Smoke free",
+    },
+    {
+      icon: "./icons/icon31.png",
+      name: "No Hairdryer",
+    },
+  ];
+  const [showMore, setShowMore] = useState(false);
+  const [itemsToShowCount, setItemsToShowCount] = useState(10);
+
+  useEffect(() => {
+    const updateItemsToShowCount = () => {
+      if (window.innerWidth >= 1024) {
+        // Assuming 1024px as the breakpoint for PCs
+        setItemsToShowCount(10);
+      } else {
+        setItemsToShowCount(9);
+      }
+    };
+
+    updateItemsToShowCount(); // Set the initial value
+    window.addEventListener("resize", updateItemsToShowCount);
+
+    return () => {
+      window.removeEventListener("resize", updateItemsToShowCount);
+    };
+  }, []);
+  const itemsToShow = showMore
+    ? Amenities
+    : Amenities.slice(0, itemsToShowCount);
       return (
         <div>
           <Header />
@@ -179,17 +202,30 @@ const Cottage2 = () => {
               <h3 className="text-[16px] md:text-[20px] font-semibold my-[25px]">
                 Amenities
               </h3>
-              <div className="grid grid-cols-3 md:grid-cols-5 gap-4 md:w-[1097px] md:h-[1030px]">
-                {Amenities.map((amenity, index) => (
-                  <span
-                    key={index}
-                    className="w-[102px] md:w-[205px] h-[85px] flex flex-col justify-center items-center text-[10px] md:text-[20px]"
-                  >
-                    {amenity.icon}
-                    {amenity.name}
-                  </span>
-                ))}
-              </div>
+              <div className="grid grid-cols-3 md:grid-cols-5 gap-4 md:w-[1097px]">
+            {itemsToShow.map((amenity, index) => (
+              <span
+                key={index}
+                className="w-[102px] md:w-[205px] h-[85px] flex flex-col justify-center items-center text-[10px] md:text-[20px]"
+              >
+                <img src={amenity.icon} href={amenity.name} />
+                {amenity.name}
+              </span>
+            ))}
+          </div>
+          <h6>
+            <button
+              className="btn flex ml-[5%] mt-[4%] justify-center items-center font-bold"
+              onClick={() => setShowMore(!showMore)}
+            >
+              {showMore ? "Show Less" : "Show More"}
+              {showMore ? (
+                <IoIosArrowDropup className="ml-4 " />
+              ) : (
+                <IoIosArrowDropdown className="ml-4" />
+              )}
+            </button>
+          </h6>
             </div>
             <ContactSection/>
           </div>
